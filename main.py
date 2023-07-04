@@ -19,7 +19,15 @@ from bd import chekNotificationStatus
 createBD()
 
 # Автоперезапуск при падении
- 
+def startBot():     
+    while True:
+        try:
+            print("start pooling ;)") 
+            bot.polling()
+            print("stop pooling !")
+        except Exception as e:
+            print("Произошла ошибка:", e)    
+            time.sleep(3) 
     
 
 valuetList = ["Eth","Bitcoin"]  
